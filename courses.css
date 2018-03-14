@@ -27,3 +27,42 @@ nav ul li {
 .navS {
   border-right: solid;
 }
+
+.main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.box {
+  border: solid;
+  border-width: thin;
+  width: 40%;
+  margin: 10px;
+  height: 100px;
+}
+
+.course {
+  display: inline-block;
+  width: 40%;
+  border-right: solid;
+  border-width: thin;
+  padding-left: 10px;
+}
+
+.info {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1120px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}
