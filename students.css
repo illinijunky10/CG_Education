@@ -37,7 +37,57 @@ nav ul li {
 .student_box {
   border: solid;
   border-width: thin;
-  width: 30%;
+  width: 25%;
   text-align: center;
-  height: 400px;
+}
+
+.name_tag {
+  height: 180px;
+  border-bottom: solid;
+  border-width: 1px;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  height: 180px;
+  justify-content: space-between;
+}
+
+div .title {
+  padding-left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div .stats {
+  margin: 0 30% 0 0;
+  padding: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 1120px) {
+  .main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .student_box {
+    display: block;
+    width: 80%;
+    margin: 10px;
+  }
 }
