@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95%;
+  margin-left: 2%;
+  border-bottom: solid;
+}
+
+nav h1 {
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.navT {
+  border-right: solid;
+}
+
+.navS {
+  border-right: solid;
+}
+
+.main {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.teacher_box {
+  width: 30%;
+  height: 300px;
+  margin: 30px auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-width: thin;
+  padding: 0;
+}
+
+.name_tag {
+  width: 100%;
+  border: solid;
+  border-width: 0 0 1px 0;
+  text-align: center;
+  padding: 20px;
+  height: 100px;
+  margin: 0;
+}
+
+.course {
+  width: 49%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  border: solid;
+  border-width: 0 1px 0 0;
+}
+
+.rating {
+  width: 50%;
+  margin: 0;
+  display: inline-block;
+  height: 150px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1120px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+  .teacher_box {
+    width: 80%;
+  }
+}
