@@ -10,7 +10,8 @@ var rating2=4.7;
 
 var rating3=3.8;
 
-var avgRating=3.3;
+var avgRating= (rating1 + rating2 + rating3)/3;
+avgRating= Math.round( avgRating * 10) / 10;
 
 console.log('Teacher:',teacher_name,
             'Department:', dept_name,
