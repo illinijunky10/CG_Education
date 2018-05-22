@@ -68,7 +68,7 @@ var inputDepartment = window.prompt("What department is the course in?");
 
 function findCourse (inputDepartment) {
   for (var i=0, len=inputDepartment.length; i<len; i++) {
-    if (inputDepartment== courses[i][1]) {
+    if (inputDepartment==courses[i][1]) {
       alert("Physics: " + courses[i][0]);
     } else if (inputDepartment=="Psychology") {
       alert("Psychology: " + courses[i][0]);
