@@ -45,6 +45,47 @@ console.log(student_name,major,
             'Email:',email,
             'GPA:',gpa);
 
+var gradYear = parseInt(window.prompt("What is your expected college graduation year?"));
+
+var gradMonth = window.prompt("What is your expected college graduation month?");
+
+function checkMonth (gradMonth) {
+  if (gradMonth !== "May" && gradMonth !== "December") {
+    window.prompt("Please enter either May or December!");
+  }
+}
+
+checkMonth (gradMonth);
+
+// function message (gradYear) {
+//   if (gradYear >= 2018) {
+//     console.log("You're in high school!");
+//   } else if (gradYear < 2018) {
+//     console.log("You're in college!");
+//   }
+// }
+
+// message (gradYear);
+var graduatingClass
+
+var welcomeCollegeStudent = function () {
+  alert("Welcome " + graduatingClass + "!");
+}
+
+var welcomeHsStudent = function () {
+  alert("You're still a " + graduatingClass + " in high school!")
+}
+
+function message (gradYear) {
+  if (gradYear >= 2018) {
+    welcomeHsStudent();
+  } else if (gradYear < 2018) {
+    welcomeCollegeStudent();
+  }
+}
+
+message (gradYear);
+
 var courses = [
     ["Astronomy", "Physics"],
     ["Personality", "Psychology"],
@@ -64,19 +105,21 @@ var courses = [
 // }
 // filterByDepartment ()
 
-var inputDepartment = window.prompt("What department is the course in?");
+// Real Deal Here
 
-function findCourse (inputDepartment) {
-  for (var i=0, len=inputDepartment.length; i<len; i++) {
-    if (inputDepartment==courses[i][1]) {
-      alert("Physics: " + courses[i][0]);
-    } else if (inputDepartment=="Psychology") {
-      alert("Psychology: " + courses[i][0]);
-    }
-  }
-}
-
-findCourse (inputDepartment)
+// var inputDepartment = window.prompt("What department is the course in?");
+//
+// function findCourse (inputDepartment) {
+//   for (var i=0, len=inputDepartment.length; i<len; i++) {
+//     if (inputDepartment==courses[i][1]) {
+//       alert("Physics: " + courses[i][0]);
+//     } else if (inputDepartment=="Psychology") {
+//       alert("Psychology: " + courses[i][0]);
+//     }
+//   }
+// }
+//
+// findCourse (inputDepartment)
 
 var class_name ='Astronomy';
 
