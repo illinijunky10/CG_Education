@@ -7,7 +7,7 @@ var dept_name='Chemistry';
 var teacherRatings = [1.5, 4.7, 3.8];
 
 // **********************************
-// var newRating = parseInt(window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?"));
+var newRating = parseInt(window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?"));
 //
 // function addTeacherRating (teacherRatings, newRating) {
 //   if (0 <= newRating && newRating <= 5 ) {
@@ -40,13 +40,22 @@ var teacher = {
   name:"Emma Kepple",
   department:"Chemistry",
   ratings:[1.5, 4.7, 3.8],
-  addRating:function (teacherRatings, newRating) {
+  addRating:function (newRating) {
     if (0 <= newRating && newRating <= 5 ) {
-      teacherRatings.push(newRating);
+      this.ratings.push(newRating);
     } else {
       window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?");
     }
   }
+  getAvgRating: function (ratings) {
+    var sum = 0;
+     for (var i = 0; i < this.ratings.length; i++){
+         sum = sum + ratings[i];
+     }
+     var avg = sum / this.ratings.length;
+     prompt("Thanks for your review! "+ teacher_name + "'s average rating is now "+ avg);
+     return avg;
+   }
 };
 
 
