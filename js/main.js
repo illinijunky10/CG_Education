@@ -111,10 +111,10 @@ function welcomeStudentsByGraduatingClass (gradYear, welcomeMessage) {
   }
 }
 
-  if (2023 <= gradYear <= 2026) {
+  if (2023 <= gradYear && gradYear <= 2026) {
     // high school
     welcomeStudentsByGraduatingClass (gradYear, welcomeHsStudent);
-  } if (2019 <= gradYear <= 2022) {
+  } if (2019 <= gradYear &&  gradYear <= 2022) {
     // college
     welcomeStudentsByGraduatingClass (gradYear, welcomeCollegeStudent);
   } if (gradYear >= 2027) {
