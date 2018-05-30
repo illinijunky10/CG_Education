@@ -66,25 +66,42 @@ checkMonth (gradMonth);
 // }
 
 // message (gradYear);
-var graduatingClass
+// var graduatingClass = "senior";
 
-var welcomeCollegeStudent = function () {
+var welcomeCollegeStudent = function (graduatingClass) {
   alert("Welcome " + graduatingClass + "!");
 }
 
-var welcomeHsStudent = function () {
+var welcomeHsStudent = function (graduatingClass) {
   alert("You're still a " + graduatingClass + " in high school!")
 }
 
-function message (gradYear) {
-  if (gradYear >= 2018) {
-    welcomeHsStudent();
-  } else if (gradYear < 2018) {
-    welcomeCollegeStudent();
+
+function welcomeStudentsByGraduatingClass (gradYear, welcomeMessage) {
+// var gradYear = "2019"
+// var welcomeMessage = welcomeCollegeStudent = (function above)
+  if (gradYear === 2019 || gradYear === 2023) {
+    welcomeMessage("senior");
+
+  } else if (gradYear === 2020 || gradYear === 2024) {
+    welcomeMessage("junior");
+
+  } else if (gradYear === 2021 || gradYear === 2025) {
+    welcomeMessage ("sophomore");
+
+  } else if (gradYear === 2022 || gradYear === 2026) {
+    welcomeMessage ("freshman");
   }
 }
 
-message (gradYear);
+  if (2023 <= gradYear <= 2026) {
+    // high school
+    welcomeStudentsByGraduatingClass (gradYear, welcomeHsStudent);
+  } if (2019 <= gradYear <= 2022) {
+    // college
+    welcomeStudentsByGraduatingClass (gradYear, welcomeCollegeStudent);
+  }
+
 
 var courses = [
     ["Astronomy", "Physics"],
