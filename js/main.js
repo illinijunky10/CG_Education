@@ -6,8 +6,9 @@ var dept_name='Chemistry';
 
 var teacherRatings = [1.5, 4.7, 3.8];
 
+// **********************************
 // var newRating = parseInt(window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?"));
-
+//
 // function addTeacherRating (teacherRatings, newRating) {
 //   if (0 <= newRating && newRating <= 5 ) {
 //     teacherRatings.push(newRating);
@@ -27,11 +28,27 @@ var teacherRatings = [1.5, 4.7, 3.8];
 //   prompt("Thanks for your review! "+ teacher_name + "'s average rating is now "+ avg);
 //   return avg;
 // }
-
+//
 // console.log('Teacher:',teacher_name,
 //             'Department:', dept_name,
 //             'Ratings:', teacherRatings[0], teacherRatings[1], teacherRatings[2],
-            // 'Avg Rating', getRatingAvg(teacherRatings) );
+//             'Avg Rating', getRatingAvg(teacherRatings) );
+// ***************************************
+
+var teacher = {
+  //list and fill properties here
+  name:"Emma Kepple",
+  department:"Chemistry",
+  ratings:[1.5, 4.7, 3.8],
+  addRating:function (teacherRatings, newRating) {
+    if (0 <= newRating && newRating <= 5 ) {
+      teacherRatings.push(newRating);
+    } else {
+      window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?");
+    }
+  }
+};
+
 
 var student_name='Sally Jones';
 
@@ -100,6 +117,8 @@ function welcomeStudentsByGraduatingClass (gradYear, welcomeMessage) {
   } if (2019 <= gradYear <= 2022) {
     // college
     welcomeStudentsByGraduatingClass (gradYear, welcomeCollegeStudent);
+  } if (gradYear >= 2027) {
+    alert("Whoa, college is some years away...");
   }
 
 
