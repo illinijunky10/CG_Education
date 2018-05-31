@@ -62,8 +62,7 @@ console.log(teacher.addRating(newRating));
 console.log(teacher.ratings);
 console.log(teacher.getAvgRating());
 
-
-var student_name='Sally Super';
+var student_name='Megan Trainor';
 
 var major='Major';
 
@@ -135,24 +134,50 @@ function welcomeStudentsByGraduatingClass (gradYear, welcomeMessage) {
   }
 
 
-var courses = [
-    ["Astronomy", "Physics"],
-    ["Personality", "Psychology"],
-    ["Force", "Physics"],
-    ["Abnormal Psychology", "Psychology"]
+// var courses = [
+//     ["Astronomy", "Physics"],
+//     ["Personality", "Psychology"],
+//     ["Force", "Physics"],
+//     ["Abnormal Psychology", "Psychology"]
+//
+// ]
 
-]
+var course = {
+  name: 'Astronomy',
+  department: 'Physics',
+  teacher: 'Sally Jones',
+  semester: 'Fall 2017'
+};
+ var course2 = {
+   name: 'Personality',
+   department: 'Psychology',
+   teacher: 'Emma Kepple',
+   semester: 'Fall 2017'
+ };
+ var course3 = {
+   name: 'Force',
+   department: 'Physics',
+   teacher: 'Ben Kenobi',
+   semester: 'Fall 2019'
+ };
+ var course4 = {
+   name: 'Abnormal Psychology',
+   department: 'Psychology',
+   teacher: 'Emma Kepple',
+   semester: 'Fall 2019'
+ };
 
-// function filterByDepartment () {
-//   for (var i=0, len=courses.length; i<len; i++) {
-//     if (courses[i][1]=="Physics") {
-//       console.log ("Physics: " + courses[i][0]);
-//     } else if(courses[i][1]=="Psychology") {
-//       console.log ("Psychology: " + courses[i][0]);
-//     }
-//   }
-// }
-// filterByDepartment ()
+
+function filterByDepartment () {
+  for (var i=0, len=courses.length; i<len; i++) {
+    if (courses[i][1]=="Physics") {
+      console.log ("Physics: " + courses[i][0]);
+    } else if(courses[i][1]=="Psychology") {
+      console.log ("Psychology: " + courses[i][0]);
+    }
+  }
+}
+filterByDepartment ()
 
 // Real Deal Here
 
@@ -170,14 +195,14 @@ var courses = [
 //
 // findCourse (inputDepartment)
 
-var class_name ='Astronomy';
-
-var class_dept ='Physics';
-
-var class_teacher ='Sally Jones';
-
-var semester ='Fall 2017';
-
-console.log(class_name, class_dept,
-            'Teacher:', class_teacher,
-            'Semester:', semester);
+// var class_name ='Astronomy';
+//
+// var class_dept ='Physics';
+//
+// var class_teacher ='Sally Jones';
+//
+// var semester ='Fall 2017';
+//
+// console.log(class_name, class_dept,
+//             'Teacher:', class_teacher,
+//             'Semester:', semester);
