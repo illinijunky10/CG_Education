@@ -7,7 +7,7 @@ var dept_name='Chemistry';
 var teacherRatings = [1.5, 4.7, 3.8];
 
 // **********************************
-var newRating = parseInt(window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?"));
+var newRating = parseFloat(window.prompt("We would like for you to review. Please enter a rating between 0.0 - 5.0?"));
 
 // function addTeacherRating (teacherRatings, newRating) {
 //   if (0 <= newRating && newRating <= 5 ) {
