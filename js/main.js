@@ -146,25 +146,25 @@ var course = {
   name: 'Astronomy',
   department: 'Physics',
   teacher: 'Sally Jones',
-  semester: 'Fall 2017'
+  semester: 'Fall 2018'
 };
  var course2 = {
    name: 'Personality',
    department: 'Psychology',
    teacher: 'Emma Kepple',
-   semester: 'Fall 2017'
+   semester: 'Fall 2018'
  };
  var course3 = {
    name: 'Force',
    department: 'Physics',
    teacher: 'Ben Kenobi',
-   semester: 'Fall 2019'
+   semester: 'Spring 2019'
  };
  var course4 = {
    name: 'Abnormal Psychology',
    department: 'Psychology',
    teacher: 'Emma Kepple',
-   semester: 'Fall 2019'
+   semester: 'Spring 2019'
  };
 
 
