@@ -145,40 +145,50 @@ function welcomeStudentsByGraduatingClass (gradYear, welcomeMessage) {
 var course = {
   name: 'Astronomy',
   department: 'Physics',
-  teacher: 'Sally Jones',
+  teacher: teacher,
   semester: 'Fall 2018'
 };
  var course2 = {
    name: 'Personality',
    department: 'Psychology',
-   teacher: 'Emma Kepple',
+   teacher: teacher,
    semester: 'Fall 2018'
  };
  var course3 = {
    name: 'Force',
    department: 'Physics',
-   teacher: 'Ben Kenobi',
+   teacher: teacher,
    semester: 'Spring 2019'
  };
  var course4 = {
    name: 'Abnormal Psychology',
    department: 'Psychology',
-   teacher: 'Emma Kepple',
+   teacher: teacher,
    semester: 'Spring 2019'
  };
+var courses = [course, course2, course3, course4];
 
+var inputDepartment = window.prompt("What department is the course in?");
 
-function filterByDepartment () {
-  for (var i=0, len=courses.length; i<len; i++) {
-    if (courses[i][1]=="Physics") {
-      console.log ("Physics: " + courses[i][0]);
-    } else if(courses[i][1]=="Psychology") {
-      console.log ("Psychology: " + courses[i][0]);
+function filterByDepartment (inputDepartment, courses) {
+  var matchingCourses = [];
+
+  for (var i=0; i < courses.length; i++) {
+    var aCourse = courses[i];
+    if (aCourse.department == inputDepartment){
+      matchingCourses.push(aCourse);
+     //matchingCourses += aCourse.name + ', ';
     }
   }
-}
-filterByDepartment ()
 
+  return matchingCourses;
+}
+
+filterByDepartment (inputDepartment, courses)
+var result = filterByDepartment (inputDepartment, courses);
+console.log(result);
+
+console.log(course4.teacher.name);
 // Real Deal Here
 
 // var inputDepartment = window.prompt("What department is the course in?");
