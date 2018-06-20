@@ -114,19 +114,17 @@ console.log(historyTeacher.ratings);
 console.log(historyTeacher.getAvgRating());
 
 // Student Section
-
-var student_name='Megan Trainor';
-
-var major='Major';
-
-var email='email';
-
-var gpa='GPA';
-
-console.log(student_name,major,
-            'Email:',email,
-            'GPA:',gpa);
-
+// var student_name='Megan Trainor';
+//
+// var major='Major';
+//
+// var email='email';
+//
+// var gpa='GPA';
+//
+// console.log(student_name,major,
+//             'Email:',email,
+//             'GPA:',gpa);
 var gradYear = parseInt(window.prompt("What is your expected college graduation year?"));
 
 var gradMonth = window.prompt("What is your expected college graduation month?");
@@ -305,3 +303,34 @@ Astronomy.filterByDepartment("Physics", courses);
 // console.log(class_name, class_dept,
 //             'Teacher:', class_teacher,
 //             'Semester:', semester);
+
+function Student (student_name, major, email, avgGPA, student_courses) {
+  this.name = student_name;
+  this.major = major;
+  this.email = email;
+  this.avgGPA = avgGPA;
+  this.courses = student_courses;
+}
+
+Student.prototype = {
+  addCourse: function (newCourse){
+    this.courses.push(newCourse);
+  },
+  dropCourse: function (oldCourse){
+    this.courses.pop(oldCourse);
+  },
+  changeMajor: function (majorInput){
+    this.major = majorInput;
+  }
+};
+
+var Lizzie = new Student ("Lizzie McGuire", "Psychology", "lizzie@school.edu", 3.75, [Abnormal, Personality]);
+
+var Miranda = new Student ("Miranda Sanchez", "Art", "miranda@school.edu", 3.77, [Force, Personality]);
+
+var Gordo = new Student ("David Gordon", "Physics", "gordo@school.edu", 4.0, [Force, Astronomy]);
+
+Lizzie.addCourse(Force);
+console.log(Lizzie.courses);
+
+Lizzie.dropCourse(Force);
