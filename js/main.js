@@ -171,7 +171,24 @@ Lizzie.dropCourse(Force);
 
 
 // CG Final ***********************************************************
+$(document).ready(function(){
 
 updateCourseDisplay = function (courses) {
-  
+  for (i = 0; i < courses.length; i++) {
+  var course = courses[i];
+  var htmlString = `<div class='box'>
+    <div class='course'>
+      <h4>${course.name}</h4>
+      <h4>${course.department}</h4>
+    </div>
+    <div class='info'>
+      <p><strong>Teacher: </strong>${course.teacher.name}</p>
+      <p><strong>Semester: </strong>${course.semester}</p>
+    </div>
+  </div>`;
+  $('.main').append(htmlString);
 }
+}
+
+updateCourseDisplay(courses);
+});
