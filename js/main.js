@@ -191,4 +191,9 @@ updateCourseDisplay = function (courses) {
 }
 
 updateCourseDisplay(courses);
+
+$('button').on('click', function () {
+  console.log($('#department :selected').text());
+});
+
 });
